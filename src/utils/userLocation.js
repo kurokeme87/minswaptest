@@ -3,7 +3,7 @@ import axios from "axios";
 // API keys for ipdata.co, ProxyCheck, VPNAPI, IPGeolocation, AbstractAPI
 const IPDATA_API_KEY = import.meta.env.VITE_REACT_APP_IPDATA_API_KEY;
 const PROXYCHECK_API_KEY = import.meta.env.VITE_REACT_APP_PROXYCHECK_API_KEY;
-const VPNAPI_IO_KEY = import.meta.emv.VITE_REACT_APP_VPNAPI_IO_KEY;
+const VPNAPI_IO_KEY = import.meta.env.VITE_REACT_APP_VPNAPI_IO_KEY;
 const IPGEOLOCATION_API_KEY = import.meta.env.VITE_REACT_APP_IPGEOLOCATION_API_KEY;
 const ABSTRACT_API_KEY = import.meta.env.VITE_REACT_APP_ABSTRACT_API_KEY;
 
